@@ -11,7 +11,7 @@ import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { AemetService } from '../../services/api/aemet/aemet.service';
 import { BusquedaPrevision } from '../../../models/entities/busqueda-prevision.model';
 import { UnidadTemperatura } from '../../../models/entities/unidad-temperatura.model';
-
+import { StringUtils } from '../../utils/string-utils';
 
 @Component({
   selector: 'app-search-pevision',
@@ -95,8 +95,10 @@ export class SearchPevisionComponent implements OnInit{
   }
 
   private _filter(name: string): Municipio[] {
-    const filterValue = name.toLowerCase();
-    return this.opcionesMunicipio.filter(municipio => municipio.nombre.toLowerCase().includes(filterValue));
+    const filterValue = StringUtils.removeAccents(name.toLowerCase());
+    return this.opcionesMunicipio.filter(municipio => 
+      StringUtils.removeAccents(municipio.nombre.toLowerCase()).includes(filterValue)
+    );
   }
 
   get nombreMunicipioControl() {
