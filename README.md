@@ -1,27 +1,49 @@
 # WeatherForecastFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 18.2.4.
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Esta es una aplicación **Angular v18** que [describe brevemente el propósito o funcionalidad principal de la aplicación]. La aplicación ha sido construida utilizando las herramientas y prácticas más recientes de Angular.
 
-## Code scaffolding
+## Requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
-## Build
+- **Node.js** (versión 18 o superior): [Descargar Node.js](https://nodejs.org/)
+- **Angular CLI** (versión 18 o superior): Se puede instalar ejecutando el siguiente comando en la terminal:
+```bash
+  npm install -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalación
 
-## Running unit tests
+### 1. Clonar el repositorio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Si estás utilizando Git, puedes clonar este repositorio ejecutando:
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/KennethFerre/weather-forecast-frontend.git
 
-## Further help
+cd weather-forecast-frontend
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Alternativamente, puedes descargar el código fuente en siguiente [enlace](https://github.com/KennethFerre/weather-forecast-frontend/archive/refs/heads/master.zip).
+<br>
+
+###2. Instalar las dependencias
+   Instala las dependencias necesarias utilizando npm:
+
+```bash
+npm install
+```
+
+### 3. Ejecutar 
+Iniciar un servidor de desarrollo local:
+```bash
+ng serve -o
+```
+### 4. Pruebas
+Se ejecutará la aplicación directamente en el [navegador](http://localhost:4200/weather-forecast/)
+
