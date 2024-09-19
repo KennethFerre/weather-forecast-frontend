@@ -1,0 +1,20 @@
+<form [formGroup]="formularioPrevision" class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Municipios</mat-label>
+    <input type="text" matInput [formControl]="nombreMunicipioControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onMunicipioSelected($event)">
+      @for (option of filteredOptions | async; track option) {
+      <mat-option [value]="option">{{option.nombre}}</mat-option>
+      }
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Unidad de temperatura</mat-label>
+    <mat-select [formControl]="unidadTemperaturaControl" (selectionChange)="onUnidadTemperaturaSelected($event)">
+      @for (unidad of unidadesTemperatura; track unidad) {
+      <mat-option [value]="unidad.value">{{unidad.viewValue}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</form>

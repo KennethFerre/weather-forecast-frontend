@@ -1,0 +1,53 @@
+.box-60 {
+    min-width: 60px;
+    max-height: 60px;
+}
+
+
+.example-card {
+    width: 100%;
+}
+
+.example-card-footer {
+    padding: 16px;
+}
+
+.weather-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.weather-header mat-icon {
+    font-size: 48px;
+    color: gray;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weather-column {
+    text-align: center;
+}
+
+.rain-percentage {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.time-range {
+    display: block;
+    font-size: 14px;
+    color: gray;
+}

@@ -1,0 +1,42 @@
+<mat-card class="example-card" appearance="outlined" *ngIf="previsionMunicipio">
+    <mat-card-header>
+        <mat-card-title></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{previsionMunicipio.nombreMunicipio}}</p>
+        <p>{{ previsionMunicipio.fecha | date:'fullDate' | capitalize }}</p>
+        <div>
+            <p>
+                <span style="font-size: xx-large">{{previsionMunicipio.mediaTemperatura | truncateNumber }}</span>
+                <span>{{previsionMunicipio.unidadTemperatura! | temperature}}</span>
+                <img class="box-60"
+                    [src]="'https://www.aemet.es/imagenes/png/estado_cielo/'+previsionMunicipio.estadoCielo+'.png'" />
+            </p>
+        </div>
+    </mat-card-content>
+    <mat-card-footer class="example-card-footer">
+        <div class="weather-card mat-elevation-z2">
+            <div class="weather-header">
+                <img src="https://www.aemet.es/imagenes/png/estado_cielo/46.png" />
+            </div>
+
+            <div class="weather-info">
+                @for (prevision of previsionMunicipio.probPrecipitacion; track prevision.probabilidad + prevision.periodo) {
+                <div class="weather-column">
+                    <span class="rain-percentage">{{prevision.probabilidad | symbol : '%'}}</span>
+                </div>
+                }
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="weather-info">
+                @for (prevision of previsionMunicipio.probPrecipitacion; track prevision.periodo) {
+                <div class="weather-column">
+                    <span class="rain-percentage">{{obtenerPeriodoFormateado(prevision.periodo)}}</span>
+                </div>
+                }
+            </div>
+        </div>
+    </mat-card-footer>
+</mat-card>
