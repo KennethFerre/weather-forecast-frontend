@@ -1,17 +1,17 @@
 import { Component, EventEmitter, inject, OnInit, Output } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule, MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { map, Observable, of, startWith } from 'rxjs';
-import { Municipio } from '../../../models/entities/municipio.model';
-import { PrevisionMunicipio } from '../../../models/entities/prevision-municipio.model';
-import { AsyncPipe } from '@angular/common';
 import { MatSelectChange, MatSelectModule } from '@angular/material/select';
-import { AemetService } from '../../services/api/aemet/aemet.service';
-import { BusquedaPrevision } from '../../../models/entities/busqueda-prevision.model';
-import { UnidadTemperatura } from '../../../models/entities/unidad-temperatura.model';
-import { StringUtils } from '../../utils/string-utils';
+import { map, Observable, of, startWith } from 'rxjs';
+import { Municipio } from '@models/municipio.model';
+import { PrevisionMunicipio } from '@models/prevision-municipio.model';
+import { AemetService } from '../../common/services/api/aemet/aemet.service';
+import { BusquedaPrevision } from '@models/busqueda-prevision.model';
+import { UnidadTemperatura } from '@models/unidad-temperatura.model';
+import { StringUtils } from '../../common/utils/string-utils';
 
 @Component({
   selector: 'app-search-pevision',

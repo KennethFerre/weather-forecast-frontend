@@ -1,9 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClientService } from '../http/http-client-service.';
-import { Municipio } from '../../../../models/entities/municipio.model';
-import { environment } from '../../../../environments/environment';
-import { PrevisionMunicipio } from '../../../../models/entities/prevision-municipio.model';
+import { Municipio } from '@models/municipio.model';
+import { PrevisionMunicipio } from '@models/prevision-municipio.model';
+import { environment } from '@environments/environment';
 import { QueryParamsUtils } from '../../../utils/query-params-util';
 
 @Injectable({

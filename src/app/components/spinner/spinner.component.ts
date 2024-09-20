@@ -1,6 +1,6 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { BlockUIService } from '../../services/ui/block-ui.service';
+import { BlockUIService } from '../../common/services/ui/block-ui.service';
 import { NgIf } from '@angular/common';
 
 @Component({

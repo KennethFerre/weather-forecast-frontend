@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { SearchPevisionComponent } from '../search-pevision/search-pevision.component';
 import { PrevisionComponent } from '../prevision/prevision.component';
-import { AemetService } from '../../services/api/aemet/aemet.service';
-import { BusquedaPrevision } from '../../../models/entities/busqueda-prevision.model';
-import { PrevisionMunicipio } from '../../../models/entities/prevision-municipio.model';
+import { AemetService } from '../../common/services/api/aemet/aemet.service';
+import { BusquedaPrevision } from '@models/busqueda-prevision.model';
+import { PrevisionMunicipio } from '@models/prevision-municipio.model';
 
 @Component({
   selector: 'app-aemet',
