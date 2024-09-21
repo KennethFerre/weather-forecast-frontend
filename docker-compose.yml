@@ -1,0 +1,23 @@
+version: '3'
+services:
+  frontend:
+    image: kenneth100/weather-forecast-frontend:latest    
+    container_name: frontend
+    ports:
+      - "4200:80"               
+    networks:
+      - app-network             
+    depends_on:
+      - backend                 
+
+  backend:
+    image: kenneth10/weather-forecast:latest     
+    container_name: backend
+    ports:
+      - "8080:8080"             
+    networks:
+      - app-network             
+
+networks:
+  app-network:                  
+    driver: bridge
