@@ -1,4 +1,5 @@
 export const environment = {
     production: true,
-    apiUrlBase: 'http://host.docker.internal:8080/api',
+    baseHref: '/weather-forecast',
+    apiUrlBase: 'http://localhost:8080/api',
 };
